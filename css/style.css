@@ -183,8 +183,6 @@ h6 {
         max-width: none;
         width: auto;
     }
-}
-@media (max-width: 1024px) {
     .header {
         height: 80px;
     }
@@ -206,7 +204,7 @@ h6 {
         min-width: 80px;
     }
     .header__nav-menu .menu__link img {
-        padding-right: 0;
+        padding-right: 14px;
     }
     .menu__link_right {
         display: flex;
@@ -216,6 +214,9 @@ h6 {
     .menu__item_right:nth-last-child(3) {
         border-left: none;
     }
+}
+@media (max-width: 1024px) {
+    
 }
 @media (max-width: 768px) {
     .header {
