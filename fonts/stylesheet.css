@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Cultbold';
+    src: url('Cultbold.woff2') format('woff2'),
+        url('Cultbold.woff') format('woff'),
+        url('Cultbold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
