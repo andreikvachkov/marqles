@@ -1,13 +1,4 @@
 @font-face {
-    font-family: 'Cultbold';
-    src: url('Cultbold.woff2') format('woff2'),
-        url('Cultbold.woff') format('woff'),
-        url('Cultbold.ttf') format('truetype');
-    font-weight: bold;
-    font-style: italic;
-    font-display: swap;
-}
-@font-face {
     font-family: 'Pragmatica';
     src: url('PragmaticaCyrillic.woff2') format('woff2'),
         url('PragmaticaCyrillic.woff') format('woff'),
@@ -16,3 +7,4 @@
     font-style: normal;
     font-display: swap;
 }
+

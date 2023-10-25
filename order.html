@@ -203,10 +203,12 @@
                                             255 922 ₽
                                         </div>
                                     </div>
+                                    <div class="paymet__button__wrap">
+                                        <a class="paymet__button" href="">
+                                            Перейти к оплате
+                                        </a>
+                                    </div>
 
-                                    <a class="paymet__button" href="">
-                                        Перейти к оплате
-                                    </a>
                                     <div class="order__offerta">
                                         <input type="checkbox" class="custom-checkbox" id="oferta" name="oferta"
                                             value="yes">
@@ -405,9 +407,11 @@
                                     </div>
                                 </div>
 
-                                <a class="paymet__button" href="">
-                                    Перейти к оплате
-                                </a>
+                                <div class="paymet__button__wrap">
+                                    <a class="paymet__button" href="">
+                                        Перейти к оплате
+                                    </a>
+                                </div>
                                 <div class="order__offerta">
                                     <input type="checkbox" class="custom-checkbox" id="oferta" name="oferta"
                                         value="yes">
@@ -425,14 +429,8 @@
         $(document).ready(function () {
             const products = $(".order__product__item");
             const showAllButton = $("#show-all-button");
-
-            // Определите, сколько изначально товаров вы хотите показать
             const initialDisplayCount = 4;
-
-            // Скройте остальные товары
             products.slice(initialDisplayCount).hide();
-
-            // Добавьте обработчик события для кнопки "Показать все"
             showAllButton.click(function () {
                 products.show();
                 showAllButton.hide();
@@ -440,9 +438,7 @@
         });
     </script>
     <script>
-        // Обработчик события клика на кнопке "Отправить"
         $("#submit-button").click(function () {
-            // Получение данных из формы данных получателя
             const recipientName = $("#recipient-name").val();
             const recipientLastName = $("#recipient-last-name").val();
             const recipientMiddleName = $("#recipient-middle-name").val();
@@ -450,7 +446,6 @@
             const recipientEmail = $("#recipient-email").val();
             const orderComment = $("#order-comment").val();
 
-            // Получение данных из формы адреса
             const city = $("#city").val();
             const street = $("#street").val();
             const houseNumber = $("#house-number").val();
@@ -460,10 +455,6 @@
             const apartment = $("#apartment").val();
             const intercom = $("#intercom").val();
 
-            // Здесь вы можете отправить данные на сервер или выполнить другие действия с ними
-            // Например, собрать их в объект и отправить через AJAX-запрос
-
-            // Пример сбора данных в объект
             const data = {
                 recipient: {
                     name: recipientName,
@@ -485,53 +476,52 @@
                 }
             };
 
-            // Отправка данных на сервер или другие действия
-            // Например, с использованием AJAX-запроса
+
             $.ajax({
                 type: "POST",
                 url: "URL_для_обработки_данных",
                 data: JSON.stringify(data),
                 contentType: "application/json",
                 success: function (response) {
-                    // Обработка ответа сервера
+
                 }
             });
         });
     </script>
     <script type='text/javascript'>
         jQuery(document).ready(function () {
-            // This button will increment the value
+
             $('.qtyplus').click(function (e) {
-                // Stop acting like a button
+
                 e.preventDefault();
-                // Get the field name
+ 
                 fieldName = $(this).attr('field');
                 console.log($(this).parent());
-                // Get its current value
+
                 var currentVal = parseInt($(this).parent().find('input[name=' + fieldName + ']').val());
-                // If is not undefined
+
                 if (!isNaN(currentVal)) {
-                    // Increment
+         
                     $(this).parent().find('input[name=' + fieldName + ']').val(currentVal + 1);
                 } else {
-                    // Otherwise put a 0 there
+      
                     $(this).parent().find('input[name=' + fieldName + ']').val(0);
                 }
             });
-            // This button will decrement the value till 0
+
             $(".qtyminus").click(function (e) {
-                // Stop acting like a button
+    
                 e.preventDefault();
-                // Get the field name
+  
                 fieldName = $(this).attr('field');
-                // Get its current value
+     
                 var currentVal = parseInt($(this).parent().find('input[name=' + fieldName + ']').val());
-                // If it isn't undefined or its greater than 0
+      
                 if (!isNaN(currentVal) && currentVal > 0) {
-                    // Decrement one
+           
                     $(this).parent().find('input[name=' + fieldName + ']').val(currentVal - 1);
                 } else {
-                    // Otherwise put a 0 there
+            
                     $(this).parent().find('input[name=' + fieldName + ']').val(0);
                 }
             });
