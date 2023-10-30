@@ -690,6 +690,11 @@ h6 {
     display: block;
 }
 @media (max-width: 768px) {
+    .team-equipment_right img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
     .team-equipment {
         background: #fff;
     }
@@ -1365,6 +1370,7 @@ h6 {
     font-weight: bold;
     font-style: italic;
     line-height: 3.125rem;
+    -webkit-line-height: 1;
 }
 .advantages__title {
     color: #110d1c;
