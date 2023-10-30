@@ -1186,8 +1186,8 @@ h6 {
     text-align: center;
     font-family: Cultbold;
     font-size: 9.0208rem;
-    font-style: normal;
-    font-weight: 600;
+    font-style: italic;
+    font-weight: bold;
     line-height: 5.9348rem;
     text-align: center;
 }
@@ -1334,8 +1334,8 @@ h6 {
     text-align: center;
     font-family: Cultbold;
     font-size: 2.8125rem;
-    font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
+    font-style: italic;
     line-height: normal;
     text-align: center;
 }
@@ -1362,8 +1362,8 @@ h6 {
     text-align: center;
     font-family: Cultbold;
     font-size: 7.1272rem;
-    font-style: normal;
-    font-weight: 600;
+    font-weight: bold;
+    font-style: italic;
     line-height: 3.125rem;
 }
 .advantages__title {
