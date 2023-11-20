@@ -16,8 +16,8 @@
     box-sizing: border-box;
 }
 html {
-    /* font-size: calc(16vw / 19.2); */
-    font-size: calc(100vw / 1920 * 9);
+    font-size: calc(16vw / 19.2);
+    /* font-size: calc(100vw / 1920 * 9); */
 }
 @media screen and (max-width: 768px) {
     html {
